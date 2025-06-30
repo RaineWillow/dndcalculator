@@ -21,7 +21,7 @@ let set17 = -1;
 
 for (let i = 0; i < stats.length; i++) {
   let currentStat = document.getElementById(stats[i] + "Value");
-  currentStat.innerText = (baseStats[i]+setStats[i]).toString();
+  currentStat.innerText = (baseStats[i]+setStats[i]).toString().padEnd(2, " ");
 }
 
 function updateMax() {
@@ -38,7 +38,7 @@ function updateMax() {
   remainingPointsDisplay.innerText = (maxPoints-usedPoints).toString();
   for (let i = 0; i < stats.length; i++) {
     let currentStat = document.getElementById(stats[i] + "Value");
-    currentStat.innerText = (baseStats[i]+setStats[i]).toString();
+    currentStat.innerText = (baseStats[i]+setStats[i]).toString().padEnd(2, " ");
   }
 
   set17 = -1;
@@ -56,7 +56,7 @@ function reset() {
   remainingPointsDisplay.innerText = (maxPoints-usedPoints).toString();
   for (let i = 0; i < stats.length; i++) {
     let currentStat = document.getElementById(stats[i] + "Value");
-    currentStat.innerText = (baseStats[i]+setStats[i]).toString();
+    currentStat.innerText = (baseStats[i]+setStats[i]).toString().padEnd(2, " ");
   }
 
   set17=-1;
@@ -75,7 +75,7 @@ function inc(i) {
   setStats[i] += 1;
   usedPoints   += stepCost;
 
-  document.getElementById(stats[i] + "Value").innerText = (cur + 1).toString();
+  document.getElementById(stats[i] + "Value").innerText = (cur + 1).toString().padEnd(2, " ");
   remainingPointsDisplay.innerText = (maxPoints-usedPoints).toString();
 }
 
@@ -90,7 +90,7 @@ function dec(i) {
   usedPoints  -= refund;
 
   if (usedPoints < 0) usedPoints = 0;
-  document.getElementById(stats[i] + "Value").innerText = (cur - 1).toString();
+  document.getElementById(stats[i] + "Value").innerText = (cur - 1).toString().padEnd(2, " ");
   remainingPointsDisplay.innerText = (maxPoints-usedPoints).toString();
 }
 
@@ -111,11 +111,11 @@ function setSeventeen(i) {
     usedPoints -= refund;
     if (usedPoints < 0) usedPoints = 0;
 
-    document.getElementById(stats[set17] + "Value").innerText = (resetCur).toString();
+    document.getElementById(stats[set17] + "Value").innerText = (resetCur).toString().padEnd(2, " ");
   }
 
   set17 = i;
 
-  document.getElementById(stats[i] + "Value").innerText = (17).toString();
+  document.getElementById(stats[i] + "Value").innerText = (17).toString().padEnd(2, " ");
   remainingPointsDisplay.innerText = (maxPoints - usedPoints).toString();
 }
