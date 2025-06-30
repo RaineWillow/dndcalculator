@@ -1,0 +1,52 @@
+<html>
+  <head>
+
+  </head>
+  <body>
+    <p>Max Points: <span id="MaxPointsDisplay"></span></p>
+    <input id="MaxPoints" type="number">
+    <button id="updateMax" onclick="updateMax()">Update max Points</button>
+    <p>________________________________________</p>
+    <p></p>
+
+    <p>Points remaining: <span id="pointsRemaining"></span></p>
+    <button id="ResetButton" onclick="reset()">Reset</button>
+
+    <p>STR: <span id="STRValue">0</span>
+      <button id="STRINC" onclick="inc(0)">+</button>
+      <button id="STRDEC" onclick="dec(0)">-</button>
+      <button onclick="setSeventeen(0)">Set 17</button>
+    </p>
+
+    <p>DEX: <span id="DEXValue">0</span>
+      <button id="DEXINC" onclick="inc(1)">+</button>
+      <button id="DEXDEC" onclick="dec(1)">-</button>
+      <button onclick="setSeventeen(1)">Set 17</button>
+    </p>
+    
+    <p>CON: <span id="CONValue">0</span>
+      <button id="CONINC" onclick="inc(2)">+</button>
+      <button id="CONDEC" onclick="dec(2)">-</button>
+      <button onclick="setSeventeen(2)">Set 17</button>
+    </p>
+
+    <p>INT: <span id="INTValue">0</span>
+      <button id="INTINC" onclick="inc(3)">+</button>
+      <button id="INTDEC" onclick="dec(3)">-</button>
+      <button onclick="setSeventeen(3)">Set 17</button>
+    </p>
+
+    <p>WIS: <span id="WISValue">0</span>
+      <button id="WISINC" onclick="inc(4)">+</button>
+      <button id="WISDEC" onclick="dec(4)">-</button>
+      <button onclick="setSeventeen(4)">Set 17</button>
+    </p>
+    <p>CHA: <span id="CHAValue">0</span>
+      <button id="CHAINC" onclick="inc(5)">+</button>
+      <button id="CHADEC" onclick="dec(5)">-</button>
+      <button onclick="setSeventeen(5)">Set 17</button>
+    </p>
+  </body>
+
+  <script src="./javascript/main.js"></script>
+</html>
