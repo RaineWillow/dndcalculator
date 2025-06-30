@@ -2,8 +2,6 @@
 
 /* page-wide layout & typography */
 body{
-
-  overflow: hidden;
   /* center everything in a single column */
   display:flex;
   flex-direction:column;
