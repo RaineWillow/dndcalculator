@@ -1,0 +1,52 @@
+/* style.css  — include with <link rel="stylesheet" href="style.css"> */
+
+/* page-wide layout & typography */
+body{
+  /* center everything in a single column */
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;   /* start at top, still centered horizontally */
+  min-height:100vh;
+
+  /* look & feel */
+  margin:0;
+  padding:2rem;
+  background:#222831;           /* ← pick any color you like */
+  color:#eeeeee;                /* light text for contrast */
+
+  font-family:"Courier New",Consolas,monospace;
+  font-size:1.25rem;            /* larger monospace font */
+  line-height:1.4;
+}
+
+/* give paragraphs and inputs a little breathing room */
+p,
+input,
+button{
+  margin:0.25rem 0;
+}
+
+/* make buttons stand out but stay readable in dark theme */
+button{
+  background:#393e46;
+  color:#eeeeee;
+  border:none;
+  padding:0.4rem 0.8rem;
+  font:inherit;
+  cursor:pointer;
+  border-radius:4px;
+}
+button:hover{
+  background:#50565f;
+}
+input{
+  background:#393e46;
+  color:#eeeeee;
+  border:1px solid #50565f;
+  padding:0.3rem 0.5rem;
+  font:inherit;
+  border-radius:4px;
+  width:6rem;
+  text-align:center;
+}
