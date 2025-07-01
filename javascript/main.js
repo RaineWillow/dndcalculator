@@ -97,7 +97,7 @@ function dec(i) {
 function setSeventeen(i) {
   const cur = baseStats[i] + setStats[i];
 
-  const refund = (setStats[i]*(setStats[i]+1))/2;
+  const refund = Math.floor((setStats[i]*(setStats[i]+1))/2);
   setStats[i] = 0;
   usedPoints-=refund;
 
@@ -106,7 +106,7 @@ function setSeventeen(i) {
   if (set17 != i && set17 != -1) {
     const resetCur = baseStats[set17] + setStats[set17];
 
-    const refund = (setStats[set17]*(setStats[set17]+1))/2;
+    const refund = Math.floor((setStats[set17]*(setStats[set17]+1))/2);
     setStats[set17] = 0;
     usedPoints -= refund;
     if (usedPoints < 0) usedPoints = 0;
